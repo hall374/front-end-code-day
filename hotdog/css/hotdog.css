@@ -1,4 +1,142 @@
-body{
-	background-color: #EFEFEF;
-	width: 100%;
+/** Global **/
+html{
+	background-color: lightgray;
 }
+
+body{
+	width: 100%;
+	height: 300px;
+	background-color: blue;
+}
+
+.clear{
+	clear: both;
+}
+/** End Global **/
+
+/** Navigation **/
+#main-container{
+	max-width: 1280px;
+	margin-left: auto;
+	margin-right: auto;
+	background-color: #FFFFFF;
+}
+
+.main-navbar{
+	padding-top: 30px;
+	padding-bottom: 30px;
+	padding-left: 150px;
+	padding-right: 150px;
+	margin-bottom: 0;
+	background-color: white;
+}
+
+.main-navbar button{
+	border-color: lightgray;	
+}
+
+.main-navbar button>span{
+	background-color: lightgray;
+}
+
+.main-navbar .navbar-brand{
+	padding: 0;
+	margin: 0;
+	width: 201px;
+	height: 56px;
+}
+
+.main-navbar .navbar-nav>li>a{
+	font-family: Impact, Charcoal, sans-serif;
+	font-size: 27px;
+	font-weight: bold;
+	color: black;
+}
+
+.navbar-collapse{
+	float: right;
+}
+
+@media (max-width: 1024px){
+	.main-navbar{
+		padding-left: 75px;
+		padding-right: 75px;
+	}
+}
+
+@media (max-width: 768px){	
+	#main-container{
+		padding-top: 75px;
+	}
+
+	.main-navbar{
+		position: fixed;
+		z-index: 2;
+		top: 0;
+		padding-left: 0;
+		padding-right: 0;
+		padding-top: 10px;
+		padding-bottom: 10px;
+		width: 100%;
+	}
+
+	.main-navbar .navbar-header{
+		padding-left: 30px;
+		padding-right: 15px;
+	}
+
+	.main-navbar .navbar-collapse{
+		padding-top: 10px;
+		float: none;
+	}
+
+	.main-navbar .navbar-nav>li>a{
+		text-align: center;
+	}
+}
+
+/** END Navagaion **/
+
+/** Local Favorites **/
+.local-favorites-container{
+	position: relative;
+}
+
+.local-favorites-container>.yellow-divider{
+	height: 15px;
+	width: 100%;
+	background-color: yellow;
+	position: relative;
+	z-index: 1;
+}
+
+.local-favorites-container>.local-favorites{
+	height: 490px;
+	position: relative;
+	z-index: 0;
+	overflow: hidden;
+}
+
+.local-favorites-container>.local-favorites>img{
+	position: absolute;
+	width: 1280px;
+	top: -15px;
+	overflow: hidden;
+}
+
+@media(max-width: 768px){
+	.local-favorites-container>.yellow-divider{
+		position: fixed;
+	}
+
+	.local-favorites-container>.local-favorites>img{
+		top: 0;
+	}
+}
+/** END Local Favorites **/
+
+/** Main Content **/
+.instagram-logo-container{
+
+}
+/** END Main Content **/

@@ -3,12 +3,14 @@
 	<head>
 		<title>Dirty Frank's Hotdogs</title>
 		<!-- Link to CSS -->
-		<link rel="stylesheet" type="text/css" href="css/hotdog.css">
 		<link rel="stylesheet" type="text/css" href="plugins/bootstrap-3.3.6-dist/bootstrap-3.3.6-dist/css/bootstrap.min.css">
 		<link rel="stylesheet" type="text/css" href="plugins/bootstrap-3.3.6-dist/bootstrap-3.3.6-dist/css/bootstrap-theme.min.css">
 		<link rel="stylesheet" type="text/css" href="plugins/jasny-bootstrap-3.1.3-dist/jasny-bootstrap/css/jasny-bootstrap.min.css">
 		<link rel="stylesheet" type="text/css" href="plugins/slick-1.5.9/slick-1.5.9/slick/slick.css">
 		<link rel="stylesheet" type="text/css" href="plugins/slick-1.5.9/slick-1.5.9/slick/slick-theme.css">
+
+		<!-- Custom CSS -->
+		<link rel="stylesheet" type="text/css" href="css/hotdog.css">
 
 		<!-- Link to JavaScript -->
 		<script src="js/jquery-1.12.1.min.js"></script>
@@ -17,6 +19,47 @@
 		<script src="plugins/slick-1.5.9/slick-1.5.9/slick/slick.min.js"></script>
 	</head>
 	<body>
-
+		<div id="main-container" class="container-fluid">
+			<div class="row">
+				<div class="navbar .col-xs-12 main-navbar" role="navigation">
+			    	<div class="container-fluid">
+				    	<div class="row">
+				       		<div class="navbar-header">
+				       			<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navigationbar">
+							       <span class="sr-only">Toggle navigation</span>
+							       <span class="icon-bar"></span>
+							       <span class="icon-bar"></span>
+							       <span class="icon-bar"></span>
+				      			</button>
+					     		<a class="navbar-brand" href="#">
+					     			<img src="img/dirty-dogs.png" alt="DIRTY DOGS"/>
+					     		</a>
+				    		</div>
+							<div class="collapse navbar-collapse" id="navigationbar">
+								<ul class="nav navbar-nav">
+								   <li><a href="#">MENU</a></li>
+								   <li><a href="#">ABOUT US</a></li>
+								   <li><a href="#">CONTACT</a></li>
+								</ul>
+							</div><!-- /.navbar-collapse -->
+							<div class="clear"></div>
+						</div>
+						</div><!-- /.container-fluid -->
+					</div><!-- /.main-navbar -->
+				<div class="clear"></div>
+			</div>
+			<div class="row local-favorites-container">
+				<div class="yellow-divider"></div>
+				<div class="local-favorites">
+					<img src="img/local-favorites.png" alt="Local Favorites"/>
+				</div>
+			</div>
+			<div class="row main-content">
+				<div class="instagram-logo-cotainer">
+					<a href="#"><img src="img/instagram-dirtyfranks.png" alt="Instagram"/></a>
+				</div>
+			</div>
+			<div class="clear"></div>
+		</div><!-- /#main-container -->
 	</body>
 </html>
