@@ -12,11 +12,6 @@ body{
 	position: relative;
 }
 
-/** Clear so container takes height of contents **/
-.container-fluid:after{
-	clear: both !important;
-}
-
 .homepage#main-container{
 	max-width: 1280px;
 	margin-left: auto;
@@ -44,8 +39,9 @@ body{
 .main-navbar>.row{
 	padding-top: 30px;
 	padding-bottom: 30px;
-	padding-left: 150px;
-	padding-right: 150px;
+	max-width: 975px;
+	margin-left: auto;
+	margin-right: auto;
 	background-color: #FFFFFF;
 }
 
@@ -58,7 +54,7 @@ body{
 }
 
 .main-navbar .navbar-brand{
-	padding: 0;
+	padding: 0 15px;
 	margin: 0;
 	width: 201px;
 	height: 56px;
@@ -74,13 +70,6 @@ body{
 	float: right;
 }
 
-@media (max-width: 992px){
-	.main-navbar>.row{
-		padding-left: 75px;
-		padding-right: 75px;
-	}
-}
-
 @media (max-width: 768px){	
 	.main-navbar{
 		position: fixed;
@@ -93,11 +82,7 @@ body{
 		padding-right: 0;
 		padding-top: 10px;
 		padding-bottom: 10px;
-	}
-
-	.main-navbar .navbar-header{
-		padding-left: 30px;
-		padding-right: 15px;
+		max-width: 100%;
 	}
 
 	.main-navbar .navbar-collapse{
@@ -151,17 +136,13 @@ body{
 /** END Local Favorites **/
 
 /** Main Content **/
-.homepage .main-content{
-
-}
-
 .homepage .main-content .instagram-logo-container{
 	padding-top: 15px;
 	padding-right: 150px;
 }
 
 .homepage .main-content .slick-carousel{
-	padding-top: 75px;
+	padding-top: 50px;
 	max-width: 1000px;
 	margin-left: auto;
 	margin-right: auto;
@@ -246,6 +227,7 @@ body{
 	text-align: center;
 	padding-top: 30px;
 	font-size: 22px;
+	text-decoration: none;
 }
 
 .homepage .main-content .business-info .info-box#our-hours{
@@ -351,3 +333,68 @@ body{
 	}
 }
 /** END Main Content **/
+
+/** Begin Footer **/
+.homepage .footer-container{
+	padding-top: 80px;
+}
+
+.homepage .footer-container .footer{
+	background-color: #EFEFEF;
+	border-top: 2px solid #E9E9E9;
+	padding-top: 25px;
+	padding-bottom: 25px;
+	color: #858585;
+}
+
+.homepage .footer-container .footer>div{
+	max-width: 975px
+}
+
+.homepage .footer-container .footer>div .footer-contact-info{
+	float: right;
+}
+
+.homepage .footer-container .footer .pipe-separator{
+	padding: 0 10px;
+}
+
+/** Footer contact us **/
+.homepage .footer-container .footer .pipe-separator+span>a{
+	color: #858585;;
+}
+
+.homepage .footer-container .footer .pipe-separator+span>a:hover{
+	text-decoration: none;
+	color: black;
+}
+
+.homepage .footer-container .footer>div .footer-contact-info>.footer-social-media-link{
+	display: inline-block;
+	padding-left: 25px;
+}
+
+
+
+@media(max-width: 992px){
+	.homepage .footer-container{
+		padding-top: 60px;
+	}
+
+	.homepage .footer-container .footer>div>span{
+		display: block;
+		text-align: center;
+	}
+
+	.homepage .footer-container .footer>div .footer-contact-info{
+		float: none;
+		padding-top: 15px;
+	}
+}
+
+@media(max-width: 768px){
+	.hoepage .footer-container{
+		padding-top: 40px;
+	}
+}
+/** End Footer **/

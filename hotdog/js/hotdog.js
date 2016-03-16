@@ -7,7 +7,16 @@ $(document).ready(function(){
 		speed: 300,
 		slidesToShow: 1,
 		adaptiveHeight: true,
-		autoplay: false,
-		autoplaySpeed: 7000,
+		autoplay: true,
+		autoplaySpeed: 15000,
+		responsive: [
+	    {
+	      breakpoint: 992,
+	      settings: {
+	        autoplay: false
+	      	}
+	    }],
 	});
+
+	$(".homepage .main-content .slick-carousel .slick-slide01").click();
 });
