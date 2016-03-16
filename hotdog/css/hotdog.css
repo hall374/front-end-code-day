@@ -4,18 +4,22 @@
 }
 
 /** Global **/
-html{
-	background-color: lightgray;
-}
-
 body{
 	width: 100%;
-	height: 300px;
-	background-color: blue;
+	background-color: lightgray;
 }
 
 .clear{
 	clear: both;
+}
+
+#main-container{
+	position: relative;
+}
+
+/** Clear so container takes height of contents **/
+.container-fluid:after{
+	clear: both !important;
 }
 
 .homepage#main-container{
@@ -23,6 +27,7 @@ body{
 	margin-left: auto;
 	margin-right: auto;
 	background-color: #FFFFFF;
+	position: relative;
 }
 
 @media(max-width: 768px){
@@ -35,11 +40,17 @@ body{
 
 /** Navigation **/
 .main-navbar{
+	margin-bottom: 0;
+	padding-top: 0;
+	width: 100%;
+	background-color: #FFFFFF;
+}
+
+.main-navbar>.row{
 	padding-top: 30px;
 	padding-bottom: 30px;
 	padding-left: 150px;
 	padding-right: 150px;
-	margin-bottom: 0;
 	background-color: #FFFFFF;
 }
 
@@ -70,7 +81,7 @@ body{
 }
 
 @media (max-width: 1024px){
-	.main-navbar{
+	.main-navbar>.row{
 		padding-left: 75px;
 		padding-right: 75px;
 	}
@@ -81,11 +92,13 @@ body{
 		position: fixed;
 		z-index: 2;
 		top: 0;
+	}
+
+	.main-navbar>.row{
 		padding-left: 0;
 		padding-right: 0;
 		padding-top: 10px;
 		padding-bottom: 10px;
-		width: 100%;
 	}
 
 	.main-navbar .navbar-header{
@@ -113,7 +126,7 @@ body{
 .homepage .local-favorites-container>.yellow-divider{
 	height: 15px;
 	width: 100%;
-	background-color: yellow;
+	background-color: #FFFE05;
 	position: relative;
 	z-index: 1;
 }
@@ -158,8 +171,8 @@ body{
 	max-width: 1000px;
 	margin-left: auto;
 	margin-right: auto;
-	padding-bottom: 60px;
-
+	padding-bottom: 75px;
+	margin-bottom: 0;
 }
 
 .homepage .main-content .slick-carousel .slick-slide{
@@ -169,13 +182,9 @@ body{
 	font-weight: bold;
 }
 
-.homepage .main-content .slick-carousel .slick-slider{
-	margin-bottom: 0 !important;
-}
-
 /** Override default slick-dots styling; requires !important **/
 .homepage .main-content .slick-carousel .slick-dots{
-	bottom: -30px !important;
+	bottom: -12px !important;
 }
 
 .homepage .main-content .slick-carousel .slick-dots>li{
@@ -189,6 +198,23 @@ body{
 .homepage .main-content .slick-carousel .slick-dots li.slick-active>button::before, .homepage .main-content .slick-carousel .slick-dots button:hover::before{
 	color: #D66D58 !important;
 }
+/** END slick-dots overrid **/
+
+.homepage .main-content .business-info{
+	padding-top: 90px;
+	margin-left: auto;
+	margin-right: auto;
+	width: 975px;
+}
+
+.homepage .main-content .business-info .info-box{
+	border: 5px solid #DCDD15;
+	border-radius: 5px;
+	height: 395px;
+	padding-top: 30px;
+	padding-left: 45px;
+	padding-right: 45px;
+}
 
 @media(max-width: 1024px){
 	.homepage .main-content .instagram-logo-container{
@@ -199,6 +225,12 @@ body{
 		padding-left: 75px;
 		padding-right: 75px;
 		font-size: 36px;
+	}
+
+	.homepage .main-content .business-info{
+		padding-top: 60px;
+		padding-left: 30px;
+		padding-right: 30px;
 	}
 }
 
@@ -211,6 +243,10 @@ body{
 		padding-left: 30px;
 		padding-right: 30px;
 		font-size: 30px;
+	}
+
+	.homepage .main-content .business-info, .homepage .main-content .business-info .col-xs-12{
+		padding-top: 30px;
 	}
 }
 /** END Main Content **/
